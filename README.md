@@ -1,6 +1,6 @@
-# node-red-contrib-bcrypt
+# node-red-contrib-twin-bcrypt
 
-## introduction
+## Introduction
 A node that can be used for encrypting user passwords 
 
 ## Features
@@ -21,3 +21,7 @@ The field specified will be replaced with the encrypted version if the action is
 ## Outputs
 
 `msg.match` will be either true or false
+
+## Credits
+Fork of **[node-red-contrib-bcrypt](https://github.com/wstam88/node-red-contrib-bcrypt)**
+Based on work started by Shane Girish at bcrypt-nodejs (MIT-licensed) which is itself based on javascript-bcrypt (New BSD-licensed)
