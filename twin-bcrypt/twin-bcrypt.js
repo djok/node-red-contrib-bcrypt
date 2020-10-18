@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-  var bcryptjs = require('bcryptjs');
+  var bcryptjs = require("twin-bcrypt");
 
   function lookup(obj, key) {
       key = parts(key);
@@ -36,7 +36,7 @@ module.exports = function(RED) {
       if (overwrite || !(key in obj)) obj[key] = value;
   }
 
-  function bcrypt(config) {
+  function twin_bcrypt(config) {
       RED.nodes.createNode(this, config);
 
       var node = this;
@@ -65,5 +65,5 @@ module.exports = function(RED) {
           return node.send(msg);
       });
   }
-  RED.nodes.registerType('bcrypt', bcrypt);
+  RED.nodes.registerType('twin-bcrypt', twin_bcrypt);
 };

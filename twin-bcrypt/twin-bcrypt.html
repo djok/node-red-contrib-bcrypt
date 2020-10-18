@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  RED.nodes.registerType('bcrypt', {
+  RED.nodes.registerType('twin-bcrypt', {
     category: 'function',
     color: '#a6bbcf',
     defaults: {
@@ -24,12 +24,12 @@
     outputs: 1,
     icon: "file.png",
     label: function() {
-      return this.name || "bcrypt";
+      return this.name || "twin-bcrypt";
     }
   });
 </script>
 
-<script type="text/x-red" data-template-name="bcrypt">
+<script type="text/x-red" data-template-name="twin-bcrypt">
   <div class="form-row">
     <label for="node-input-name"><i class="icon-tag"></i> Name</label>
     <input type="text" id="node-input-name" placeholder="Name">
@@ -55,15 +55,15 @@
   </div>
 </script>
 
-<script type="text/x-red" data-help-name="bcrypt">
+<script type="text/x-red" data-help-name="twinbcrypt">
   <div id="out">
-    <h1>node-red-contrib-bcrypt</h1>
+    <h1>node-red-contrib-twinbcrypt</h1>
     <h2>Features</h2>
     <ul>
       <li>encrypt</li>
       <li>verify</li>
     </ul>
-    <p>Uses <a href="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a></p>
+    <p>Uses <a href="https://github.com/fpirsch/twin-bcrypt">twin-bcrypt.js</a></p>
     <h2>options</h2>
     <p><strong>field</strong>: field to encrypt or to verify against <em>(dot.notation)</em></p>
     <p><strong>verify</strong>: field to verify <em>(dot.notation)</em></p>
