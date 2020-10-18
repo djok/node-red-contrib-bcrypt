@@ -44,7 +44,7 @@ module.exports = function(RED) {
       var field = config.field || 'payload';
       var action = config.action || 'encrypt';
       var rounds = parseInt(rounds);
-      var salt = bcryptjs.genSaltSync(rounds);
+      var salt = bcryptjs.genSalt(rounds);
 
       this.on('input', function(msg) {
           var data = get(msg, field);
