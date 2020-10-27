@@ -1,7 +1,7 @@
 # node-red-contrib-twin-bcrypt
 
 ## Introduction
-A node that can be used for encrypting user passwords 
+A node that can be used for encrypting user passwords compatible with PHP crypt() function
 
 ## Features
 
