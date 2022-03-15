@@ -44,12 +44,12 @@ module.exports = function(RED) {
       var field = config.field || 'payload';
       var action = config.action || 'encrypt';
       var rounds = parseInt(rounds);
-      var salt = bcryptjs.genSalt(rounds);
 
       this.on('input', function(msg) {
           var data = get(msg, field);
 
           if (action === 'encrypt') {
+              var salt = bcryptjs.genSalt(rounds);
               var newHash = bcryptjs.hashSync(data, salt);
 
               set(msg, field, newHash, true);
